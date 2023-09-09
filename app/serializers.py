@@ -33,5 +33,5 @@ class SalesDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = SalesDetails
         fields = '__all__'
-        
+         
         

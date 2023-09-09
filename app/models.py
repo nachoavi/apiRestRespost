@@ -5,8 +5,12 @@ from django.db import models
 class ProductsInventory(models.Model):
     name = models.CharField(max_length=100,null=False)
     price = models.DecimalField(max_digits=10,decimal_places=2,null=False)
-    description = models.TextField(max_length=200)
+    description = models.TextField(max_length=200,null=True)
     stock = models.PositiveIntegerField(null=False)
+    
+    def __str__(self):
+        return self.name
+    
     
 class Client(models.Model):
     name = models.CharField(max_length=50,null=False)
@@ -45,4 +49,4 @@ class SalesDetails(models.Model):
 
     
     
-    
+     
